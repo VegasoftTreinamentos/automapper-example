@@ -1,0 +1,25 @@
+﻿<h2>Usuário:</h2>
+
+    var usuario = new Usuario <br />
+    {<br />
+        Nome = "Rafael",<br />
+        Sobrenome = "de Oliveira Marques",<br />
+        Email = "rafaelomarques@gmail.com"<br />
+    };<br />
+
+
+<h2>ViewModel</h2>
+
+ViewBag.UsuarioView = AutoMapper.Mapper.Map<UsuarioViewModel>(usuario);<br />
+    <br />
+nome: @ViewBag.UsuarioView.Nome<br />
+Sobrenome: @ViewBag.UsuarioView.Sobrenome<br />
+Email: @ViewBag.UsuarioView.Email<br />
+
+<h2>Domain</h2>
+
+ViewBag.UsuarioDomain = AutoMapper.Mapper.Map<Usuario>(usuarioView);<br />
+    <br />
+nome: @ViewBag.UsuarioDomain.Nome<br />
+Sobrenome: @ViewBag.UsuarioDomain.Sobrenome<br />
+Email: @ViewBag.UsuarioDomain.Email<br />
